@@ -2,21 +2,22 @@
   import logo from './logo.jpg';
 </script>
 
-<header class="header">
-  <img class="header__logo" alt="Houndwalker logo" src={logo} />
+<header>
+  <img class="logo" alt="Houndwalker logo" src={logo} />
 </header>
 
 <style>
-  .header {
+  header {
     grid-column: 1 / -1;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100px;
+    min-height: 120px;
   }
 
-  .header__logo {
+  img {
     width: 80vw;
     max-width: 250px;
+    mix-blend-mode: multiply;
   }
 </style>

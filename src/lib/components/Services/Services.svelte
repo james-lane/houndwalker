@@ -66,7 +66,6 @@
       margin: 0 auto;
       max-width: 80vw;
       align-self: center;
-      margin-bottom: 20px;
     }
   }
 </style>
