@@ -27,11 +27,16 @@
 </script>
 
 {#if currentTestimonial}
-  <section class="testimonial">
-    <p class="testimonial__content">"{currentTestimonial.excerpt}"</p>
-    <p class="testimonial__author">{currentTestimonial.author}</p>
+  <section>
+    <h3 class="testimonial">"{currentTestimonial.excerpt}"</h3>
+    <p class="author">- {currentTestimonial.author}</p>
   </section>
 {/if}
 
 <style>
+  section {
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 60px;
+  }
 </style>
