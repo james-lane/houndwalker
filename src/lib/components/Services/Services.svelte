@@ -39,6 +39,7 @@
 <style>
   section {
     width: 100%;
+    padding: 0 20px;
   }
 
   ul {
@@ -80,6 +81,7 @@
     border-top: 1px solid var(--color-white);
     padding: 20px 0 0;
     margin: 0;
+    width: 100%;
   }
 
   @media only screen and (min-width: 1024px)  {

@@ -19,7 +19,7 @@
 <style>
   section {
     background: var(--color-grey-light);
-    padding: 60px;
+    padding: 20px;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -32,6 +32,8 @@
     justify-content: center;
     align-items: center;
     font-family: var(--font-stack);
+    width: 100%;
+    max-width: 600px;
   }
 
   label, input, textarea {
@@ -48,7 +50,6 @@
     border-radius: 4px;
     border: none;
     padding: 0 20px;
-    box-sizing: border-box;
     font-family: var(--font-stack);
   }
 
@@ -57,9 +58,23 @@
     padding: 20px;
   }
 
+  button {
+    min-height: 44px;
+    min-width: 44px;
+    max-width: 200px;
+    width: 50vw;
+    border-radius: 4px;
+    border: none;
+    margin: 20px 0;
+    background: #3c88b8;
+    color: var(--color-white);
+    font-weight: bold;
+    -webkit-appearance: none;
+  }
+
   @media only screen and (min-width: 1024px)  {
-    form {
-      min-width: 400px;
+    section {
+      padding: 60px 0;
     }
   }
 </style>

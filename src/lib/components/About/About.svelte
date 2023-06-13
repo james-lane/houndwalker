@@ -10,13 +10,15 @@
     margin: 0 auto;
     text-align: center;
     justify-self: center;
-    padding: 20px 0;
+    padding: 60px 0;
+  }
+  p:last-child {
+    margin-bottom: 0;
   }
 
   @media only screen and (min-width: 1024px)  {
     section {
       width: 50vw;
-      padding: 60px 0;
     }
   }
 </style>

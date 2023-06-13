@@ -7,6 +7,10 @@
   --font-stack: 'Nunito Sans', sans-serif;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-size: 100%; /*16px*/
 }
