@@ -10,7 +10,7 @@
     margin: 0 auto;
     text-align: center;
     justify-self: center;
-    padding: 60px 0;
+    padding: 60px 20px;
   }
   p:last-child {
     margin-bottom: 0;
