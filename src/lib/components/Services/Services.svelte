@@ -5,20 +5,20 @@
   const services = [
     {
       title: 'Solo',
-      price: 15,
+      price: 16,
       info: 'Some time restriction these can be done 10am-2pm is group walking',
       image: solo
     },
     {
       title: 'Group',
-      price: 10,
+      price: 12,
       info: '50% discount for second dog at same address',
       image: group
     },
     {
       title: 'Out of Hours',
-      price: 15,
-      info: 'Before 9am and after 5pm and weekends',
+      price: 16,
+      info: 'On weekends or before 9am and after 5pm on weekdays',
       image: ooh
     }
   ]
