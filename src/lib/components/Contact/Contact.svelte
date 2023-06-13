@@ -1,7 +1,3 @@
-<script>
-  export const prerender = true
-</script>
-
 <section>
   <form name="contact" method="POST" data-netlify="true" action="/contact/success">
       <input type="hidden" name="subject" value="Message via website form" />
