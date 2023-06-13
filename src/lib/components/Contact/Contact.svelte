@@ -4,7 +4,8 @@
 
 <section>
   <form name="contact" method="POST" data-netlify="true">
-      <input type="hidden" name="subject" value="Message via website form" />
+    <input type="hidden" name="form-name" value="contact" />
+    <input type="hidden" name="subject" value="Message via website form" />
       <label for="name">Your Name:</label>
       <input id="name" type="text" name="name" />
       <label for="email">Your Email:</label>
