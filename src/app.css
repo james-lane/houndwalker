@@ -2,11 +2,14 @@
 
 :root {
   --color-white: #ffffff;
+  --color-grey-light: #c8c8c8;
   --color-grey: #646464;
   --font-stack: 'Nunito Sans', sans-serif;
 }
 
-html {font-size: 100%;} /*16px*/
+html {
+  font-size: 100%; /*16px*/
+}
 
 body {
   background: rgb(243, 243, 243);
@@ -14,6 +17,7 @@ body {
   font-weight: 400;
   line-height: 1.75;
   color: #000000;
+  margin: 0;
 }
 
 p {margin-bottom: 1rem;}

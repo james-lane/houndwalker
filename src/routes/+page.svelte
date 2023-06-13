@@ -5,6 +5,7 @@
 	import Services from '$lib/components/Services/Services.svelte';
 	import Testimonials from '$lib/components/Testimonials/Testimonials.svelte';
 	import Gallery from '$lib/components/Gallery/Gallery.svelte';
+	import Contact from '$lib/components/Contact/Contact.svelte';
 
 	export let data;
 	const { homepageGalleryItems: items } = data;
@@ -15,3 +16,4 @@
 <About />
 <Gallery {items} />
 <Testimonials />
+<Contact />
