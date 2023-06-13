@@ -1,5 +1,5 @@
 <section>
-  <form name="contact" method="POST" data-netlify="true">
+  <form name="contact" method="POST" data-netlify="true" action="/contact/success">
       <input type="hidden" name="subject" value="Message via website form" />
       <label for="name">Your Name:</label>
       <input id="name" type="text" name="name" />

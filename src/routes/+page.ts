@@ -1,7 +1,5 @@
 // since there's no dynamic data here, we can prerender
 // it so that it gets served as a static asset in production
-export const prerender = true;
-
 const images = [
 	{
 		img: 'http://houndwalker.uk/uploads/1/2/0/5/120528285/img-20180826-114750_orig.jpg 1667w',
