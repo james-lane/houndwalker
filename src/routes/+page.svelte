@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import '../app.css'
   import Header from '$lib/components/Header/Header.svelte';
   import About from '$lib/components/About/About.svelte';
@@ -7,7 +7,7 @@
 	import Gallery from '$lib/components/Gallery/Gallery.svelte';
 
 	export let data;
-	const { items } = data;
+	const { homepageGalleryItems: items } = data;
 </script>
 
 <Header />
