@@ -10,6 +10,8 @@
       <input id="name" type="text" name="name" />
       <label for="email">Your Email:</label>
       <input id="email" type="email" name="email" />
+      <label for="number">Your Phone Number:</label>
+      <input id="number" type="tel" name="number" />
       <label for="message">Message:</label>
       <textarea id="message" name="message"></textarea>
       <button type="submit">Send</button>
