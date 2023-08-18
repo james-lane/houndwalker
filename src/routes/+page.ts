@@ -4,21 +4,21 @@ export const prerender = true;
 
 const images = [
 	{
-		img: '/images/Image1.jpeg 1667w',
+		img: '/images/Image1.jpeg 600w',
 		thumb: '/images/Image1.jpeg',
 		height: '800',
 		width: '600',
 		alt: 'Dogs in water'
 	},
 	{
-		img: '/images/Image2.jpeg 2400w',
+		img: '/images/Image2.jpeg 800w',
 		thumb: '/images/Image2.jpeg',
-		height: '800',
-		width: '1067',
+		height: '1067',
+		width: '800',
 		alt: 'Dogs in field'
 	},
 	{
-		img: '/images/Image3.jpeg 2400w',
+		img: '/images/Image3.jpeg 768w',
 		thumb: '/images/Image3.jpeg',
 		height: '1024',
 		width: '768',
