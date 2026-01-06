@@ -11,7 +11,7 @@
 		},
 		{
 			title: 'Group',
-			price: 12,
+			price: 14,
 			info: '50% discount for second dog at same address',
 			image: group
 		},
