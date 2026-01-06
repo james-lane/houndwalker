@@ -1,16 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="robots" content="noindex" />
-		<title>Content Manager</title>
-		<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-	</head>
-	<body>
-		<!-- Include the script that builds the page and powers Decap CMS -->
-		<script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-		<script>
+<script>
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		// Load Netlify Identity Widget
+		const identityScript = document.createElement('script');
+		identityScript.src = 'https://identity.netlify.com/v1/netlify-identity-widget.js';
+		document.head.appendChild(identityScript);
+
+		// Load Decap CMS
+		const cmsScript = document.createElement('script');
+		cmsScript.src = 'https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js';
+		cmsScript.onload = () => {
 			if (window.netlifyIdentity) {
 				window.netlifyIdentity.on('init', (user) => {
 					if (!user) {
@@ -20,6 +20,12 @@
 					}
 				});
 			}
-		</script>
-	</body>
-</html>
+		};
+		document.body.appendChild(cmsScript);
+	});
+</script>
+
+<svelte:head>
+	<meta name="robots" content="noindex" />
+	<title>Content Manager</title>
+</svelte:head>
