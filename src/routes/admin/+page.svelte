@@ -1,15 +1,25 @@
-<svelte:head>
-	<title>Admin - Hound Walker</title>
-	<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-</svelte:head>
-
-<div id="nc-root"></div>
-
-<script src="https://unpkg.com/decap-cms@^3.4.0/dist/decap-cms.js"></script>
-
-<style>
-	:global(body) {
-		margin: 0;
-		padding: 0;
-	}
-</style>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="robots" content="noindex" />
+		<title>Content Manager</title>
+		<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+	</head>
+	<body>
+		<!-- Include the script that builds the page and powers Decap CMS -->
+		<script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+		<script>
+			if (window.netlifyIdentity) {
+				window.netlifyIdentity.on('init', (user) => {
+					if (!user) {
+						window.netlifyIdentity.on('login', () => {
+							document.location.href = '/admin/';
+						});
+					}
+				});
+			}
+		</script>
+	</body>
+</html>
