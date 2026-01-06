@@ -1,36 +1,21 @@
-<script>
-	import solo from './images/solo.jpg';
-	import group from './images/group.jpg';
-	import ooh from './images/ooh.jpg';
-	const services = [
-		{
-			title: 'Solo',
-			price: 16,
-			info: 'Some time restriction these can be done 10am-2pm is group walking',
-			image: solo
-		},
-		{
-			title: 'Group',
-			price: 14,
-			info: '50% discount for second dog at same address',
-			image: group
-		},
-		{
-			title: 'Out of Hours',
-			price: 16,
-			info: 'On weekends or before 9am and after 5pm on weekdays',
-			image: ooh
-		}
-	];
+<script lang="ts">
+	interface Service {
+		title: string;
+		price: number;
+		description: string;
+		image: string;
+	}
+
+	let { services = [] }: { services?: Service[] } = $props();
 </script>
 
 <section>
 	<ul>
-		{#each services as { title, price, info, image }}
+		{#each services as { title, price, description, image }}
 			<li style="background-image: url({image})">
 				<h3>{title}</h3>
 				<p class="price">£{price}</p>
-				<p class="info">{info}</p>
+				<p class="info">{description}</p>
 			</li>
 		{/each}
 	</ul>

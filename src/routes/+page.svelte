@@ -10,11 +10,14 @@
 
 	let { data } = $props();
 	const items = $derived(data.homepageGalleryItems);
+	const services = $derived(data.services);
+	const aboutHeading = $derived(data.aboutHeading);
+	const aboutContent = $derived(data.aboutContent);
 </script>
 
 <Header />
-<Services />
-<About />
+<Services {services} />
+<About heading={aboutHeading} content={aboutContent} />
 <Facebook />
 <Gallery {items} />
 <Testimonials />

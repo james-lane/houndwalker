@@ -1,15 +1,15 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Admin - Hound Walker</title>
 		<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-		%sveltekit.head%
 	</head>
-	<body data-sveltekit-preload-data="hover">
-		<div style="display: contents">%sveltekit.body%</div>
+	<body>
+		<script src="https://unpkg.com/decap-cms@^3.4.0/dist/decap-cms.js"></script>
 		<script>
+			// Redirect to home if not logged in after some time
 			if (window.netlifyIdentity) {
 				window.netlifyIdentity.on('init', (user) => {
 					if (!user) {

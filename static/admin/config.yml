@@ -1,0 +1,45 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Uncomment for local development
+# local_backend: true
+
+media_folder: "static/images/gallery"
+public_folder: "/images/gallery"
+
+collections:
+  - name: "gallery"
+    label: "Gallery"
+    label_singular: "Image"
+    folder: "content/gallery"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string", hint: "Internal name for this image" }
+      - { label: "Image", name: "image", widget: "image", hint: "Upload your gallery photo here" }
+      - { label: "Alt Text", name: "alt", widget: "string", hint: "Description for accessibility and SEO" }
+      - { label: "Order", name: "order", widget: "number", default: 0, value_type: "int", hint: "Lower numbers appear first" }
+
+  - name: "services"
+    label: "Services"
+    label_singular: "Service"
+    folder: "content/services"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string", hint: "Service name (e.g., Solo, Group)" }
+      - { label: "Price", name: "price", widget: "number", value_type: "int", hint: "Price in pounds (£)" }
+      - { label: "Description", name: "description", widget: "text", hint: "Brief description of the service" }
+      - { label: "Background Image", name: "image", widget: "image", hint: "Upload background image for this service", media_folder: "/static/images/services", public_folder: "/images/services" }
+      - { label: "Order", name: "order", widget: "number", default: 0, value_type: "int", hint: "Display order (1, 2, 3...)" }
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - name: "about"
+        label: "About Page"
+        file: "content/pages/about.md"
+        fields:
+          - { label: "Heading", name: "heading", widget: "string", hint: "Main heading for the About section" }
+          - { label: "Content", name: "body", widget: "markdown", hint: "Write your about text here. You can use paragraphs and formatting." }
