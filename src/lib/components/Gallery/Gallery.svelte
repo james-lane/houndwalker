@@ -7,7 +7,7 @@
 	import { loadBp } from './load-bp';
 
 	// image data
-	export let items: any[] = [];
+	let { items = [] }: { items?: any[] } = $props();
 
 	// initializes in onMount so it runs only in browser
 	let bp: BiggerPictureInstance;
@@ -18,7 +18,7 @@
 		const target = e.currentTarget as HTMLAnchorElement;
 		bp.open({
 			items: target.parentElement!.children,
-			el: target,
+			el: target
 		});
 	}
 
@@ -31,7 +31,7 @@
 <section use:masonry>
 	{#each items as item}
 		<a
-			on:click={openBiggerPicture}
+			onclick={openBiggerPicture}
 			href={item.img.split(' ')[0]}
 			data-img={item.img}
 			data-thumb={item.thumb}
@@ -53,12 +53,12 @@
 		vertical-align: bottom;
 	}
 
-  @media only screen and (min-width: 1024px)  {
-    section {
-      margin: 0 auto;
-      max-width: 80vw;
-      align-self: center;
-      margin-bottom: 20px;
-    }
-  }
+	@media only screen and (min-width: 1024px) {
+		section {
+			margin: 0 auto;
+			max-width: 80vw;
+			align-self: center;
+			margin-bottom: 20px;
+		}
+	}
 </style>

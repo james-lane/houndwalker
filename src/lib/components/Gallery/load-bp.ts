@@ -14,7 +14,7 @@ export async function loadBp(target?: HTMLElement) {
 	}
 	if (!bp) {
 		bp = BiggerPicture({
-			target: document.body,
+			target: document.body
 		});
 	}
 	return bp;
